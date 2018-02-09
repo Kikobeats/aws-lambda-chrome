@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "main": "index.js",
   "author": {
-    "name": "microlink.io",
     "email": "hello@microlink.io",
+    "name": "microlink.io",
     "url": "https://microlink.io"
   },
   "repository": {
@@ -17,7 +17,10 @@
     "url": "https://github.com/microlinkhq/aws-lambda-chrome/issues"
   },
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "decompress": "~4.2.0",
+    "exists-file": "~3.0.2"
+  },
   "devDependencies": {
     "coveralls": "latest",
     "finepack": "latest",
@@ -32,6 +35,10 @@
   "engines": {
     "node": ">= 6"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
