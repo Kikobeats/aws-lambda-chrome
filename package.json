@@ -22,18 +22,16 @@
     "exists-file": "~3.0.2"
   },
   "devDependencies": {
-    "coveralls": "latest",
     "finepack": "latest",
     "git-dirty": "latest",
     "husky": "latest",
     "lint-staged": "latest",
-    "nyc": "latest",
     "prettier-standard": "latest",
     "standard": "latest",
     "standard-markdown": "latest"
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">= 8"
   },
   "files": [
     "dist",
@@ -41,12 +39,11 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown && standard",
     "precommit": "lint-staged",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin}/**/*.js --single-quote",
-    "test": "nyc mocha"
+    "test": "exit 0"
   },
   "license": "MIT",
   "lint-staged": {
