@@ -1,5 +1,5 @@
 {
-  "name": "@microlinkhq/aws-lambda-chrome",
+  "name": "@browserless/aws-lambda-chrome",
   "description": "Chrome binary compatible with AWS Lambda.",
   "homepage": "https://documentup.com/microlinkhq/aws-lambda-chrome",
   "version": "1.0.1",
