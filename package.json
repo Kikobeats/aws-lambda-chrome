@@ -16,7 +16,14 @@
   "bugs": {
     "url": "https://github.com/microlinkhq/aws-lambda-chrome/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "aws",
+    "binary",
+    "chrome",
+    "chromium",
+    "lambda",
+    "serverless"
+  ],
   "dependencies": {
     "decompress": "~4.2.0",
     "exists-file": "~3.0.2"
