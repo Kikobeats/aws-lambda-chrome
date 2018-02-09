@@ -1,3 +1,10 @@
+<a name="1.0.3"></a>
+## 1.0.3 (2018-02-09)
+
+* Fix path ([a9cc880](https://github.com/microlinkhq/aws-lambda-chrome/commit/a9cc880))
+
+
+
 <a name="1.0.2"></a>
 ## 1.0.2 (2018-02-09)
 
