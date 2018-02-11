@@ -1,8 +1,8 @@
 # @browserless/aws-lambda-chrome
 
-![Last version](https://img.shields.io/github/tag/@browserless/aws-lambda-chrome.svg?style=flat-square)
-[![Dependency status](https://img.shields.io/david/@browserless/aws-lambda-chrome.svg?style=flat-square)](https://david-dm.org/@browserless/aws-lambda-chrome)
-[![Dev Dependencies Status](https://img.shields.io/david/dev/@browserless/aws-lambda-chrome.svg?style=flat-square)](https://david-dm.org/@browserless/aws-lambda-chrome#info=devDependencies)
+![Last version](https://img.shields.io/github/tag/Kikobeats/aws-lambda-chrome.svg?style=flat-square)
+[![Dependency status](https://img.shields.io/david/Kikobeats/aws-lambda-chrome.svg?style=flat-square)](https://david-dm.org/@browserless/aws-lambda-chrome)
+[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/aws-lambda-chrome.svg?style=flat-square)](https://david-dm.org/@browserless/aws-lambda-chrome#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/@browserless/aws-lambda-chrome.svg?style=flat-square)](https://www.npmjs.org/package/aws-lambda-chrome)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/microlinkhq)
 
