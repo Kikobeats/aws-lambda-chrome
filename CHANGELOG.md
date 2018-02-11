@@ -1,3 +1,11 @@
+<a name="1.0.4"></a>
+## 1.0.4 (2018-02-11)
+
+* Fix badges ([13e4f80](https://github.com/microlinkhq/aws-lambda-chrome/commit/13e4f80))
+* Update README.md ([d378f50](https://github.com/microlinkhq/aws-lambda-chrome/commit/d378f50))
+
+
+
 <a name="1.0.3"></a>
 ## 1.0.3 (2018-02-09)
 
