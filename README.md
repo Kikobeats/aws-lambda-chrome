@@ -8,6 +8,8 @@
 
 > Chrome binary compatible with AWS Lambda.
 
+*Current version: 66.0.3343.0*
+
 ## Install
 
 ```bash
