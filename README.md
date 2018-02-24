@@ -18,49 +18,42 @@ $ npm install @browserless/aws-lambda-chrome --save
 
 This package content a binary compressed version of Chrome compatible with AWS Lambda.
 
-It has been designed to be used with [puppeteer](https://github.com/GoogleChrome/puppeteer) without pain.
+It has been designed to be used with [puppeteer](https://github.com/GoogleChrome/puppeteer), specially using [browserless](https://github.com/Kikobeats/browserless).
 
-First of all, initialize the package providing a temporal folder for decompressing the file. 
-
-On AWS Lambda, this path is `/tmp`:
-
+For example, let create a `get-browserless.js` file with the follow content:
 
 ```js
-const getChromePath = require('@browserless/aws-lambda-chrome')({
-  path: '/tmp'
-})
-```
-
-Then use it when you call [puppeteer.launch](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions):
-
-```js
-const puppeteer = require('puppeteer')
+const browserless = require('browserless')
 
 const getChromePath = require('@browserless/aws-lambda-chrome')({
   path: '/tmp'
 })
 
-;(async () => {
-  const browser = await puppeteer.launch({
-    executablePath: await getExecutablePath()
-  })
-})()
-```
-
-The first time it will be used it will decompress the file. After that, the decompress version will be reused at next successive calls.
-
-This scenario is based on `production`. If you need a way to detect if you are or not on lambda, consider the following code:
-
-```js
 const isLambda = !!process.env.LAMBDA_TASK_ROOT
 const getExecutablePath = async () => (isLambda ? getChromePath() : undefined)
 
-;(async () => {
-  const browser = await puppeteer.launch({
+module.exports = async () =>
+  browserless({
+    ignoreHTTPSErrors: true,
+    args: [
+      '--disable-gpu',
+      '--single-process', // Currently wont work without this :-(
+      '--no-zygote', // helps avoid zombies
+      '--no-sandbox',
+      '--hide-scrollbars'
+    ],
     executablePath: await getExecutablePath()
   })
-})()
 ```
+
+Then in your code just call the snippet, like:
+
+```js
+const getBrowserless = require('./get-browserless')
+const { screenshot } = await getBrowserless() // serverless!
+```
+
+The first time it will be used it will decompress the file. After that, the decompress version will be reused at next successive calls.
 
 ## API
 
