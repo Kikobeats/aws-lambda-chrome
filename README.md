@@ -68,7 +68,44 @@ Default: `'dist'`
 
 Where extract the binary.
 
-## Build
+## FAQ
+
+**Q: How to use a newer version of Node on AWS Lambda?**
+
+AWS Lambda runs a old version of Node.js that doesn't support async/await, spread operator, etc.
+
+You need to ship your fresh Node.js version with your lambda function.
+
+This is an shell bash script to get the last node version available:
+
+
+```bash
+#!/bin/bash
+
+NODE_BIN=`curl -sL https://semver.io/node/resolve/8`-linux-x64
+
+echo "Downloading $NODE_BIN binary file"
+
+curl -sL https://nodejs.org/dist/latest-v8.x/node-v$NODE_BIN.tar.gz | tar -xz
+mkdir -p bin
+mv node-v$NODE_BIN/bin/node bin/node
+rm -rf node-v$NODE_BIN
+
+echo "Added \`bin/node\` as node-v$NODE_BIN"
+```
+
+You can run the script as postinstall and then user the binary created for run your microservice:
+
+```
+{
+  "scripts": {
+  "postinstall": "./scripts/download_node.sh",
+  "start": "NODE_ENV=production ./bin/node ./node_modules/micro/bin/micro.js --host localhost --port $PORT index.js"
+  }
+}
+```
+
+**Q: How Can I create my own Headless Chrome binary?**
 
 The idea behind the project is to ship a production-ready last chrome version available.
 
@@ -76,20 +113,20 @@ For do that, is necessary compile Chromium into a AWS Lambda compatible machine,
 
 These instructions are related with generate the binary for the last (or older) version.
 
-### Create EC2 instance
+You need to create a EC2 instance:
 
 - **AMI**: `amzn-ami-hvm-2017.09.0.20170930-x86_64-gp2` (Latest community Amazon Linux).
 - **Instance type**: c4.4xlarge.
 - **Storage**: 30GB.
 
-### Execute build script
+Then execute the script for build the binary:
 
 
 ```sh
 curl https://rawgit.com/Kikobeats/aws-lambda-chrome/master/build.sh | bash
 ```
 
-### Make a tarball and download
+After the process finished, copy the result (and create a PR with the new binary!)
 
 
 ```bash
