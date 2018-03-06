@@ -3,10 +3,10 @@
   "description": "Chrome binary compatible with AWS Lambda.",
   "homepage": "https://documentup.com/microlinkhq/aws-lambda-chrome",
   "version": "1.0.4",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "author": {
-    "email": "hello@microlink.io",
     "name": "microlink.io",
+    "email": "hello@microlink.io",
     "url": "https://microlink.io"
   },
   "repository": {
@@ -29,6 +29,8 @@
     "exists-file": "~3.0.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "finepack": "latest",
     "git-dirty": "latest",
     "husky": "latest",
@@ -38,16 +40,14 @@
     "standard-markdown": "latest"
   },
   "engines": {
-    "node": ">= 8"
+    "node": ">= 6.10"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
   "scripts": {
+    "build": "babel src --out-dir lib",
     "clean": "rm -rf node_modules",
     "lint": "standard-markdown && standard",
     "precommit": "lint-staged",
+    "prepublish": "npm run build",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin}/**/*.js --single-quote",
     "test": "exit 0"

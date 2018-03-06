@@ -33,3 +33,4 @@ coverage
 # Other
 ############################
 dist/headless_shell
+lib
