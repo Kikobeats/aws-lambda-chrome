@@ -52,8 +52,10 @@ module.exports = async () =>
 Then in your code just call the snippet, like:
 
 ```js
-const getBrowserless = require('./get-browserless')
-const { screenshot } = await getBrowserless() // serverless!
+;(async () => {
+  const getBrowserless = require('./get-browserless')
+  const { screenshot } = await getBrowserless() // serverless!
+})()
 ```
 
 The first time it will be used it will decompress the file. After that, the decompress version will be reused at next successive calls.
