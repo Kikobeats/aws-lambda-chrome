@@ -1,3 +1,14 @@
+<a name="1.1.0"></a>
+# 1.1.0 (2018-03-19)
+
+* Add Chrome v37 binary ([df0e518](https://github.com/microlinkhq/aws-lambda-chrome/commit/df0e518))
+* Add FAQ section ([df21385](https://github.com/microlinkhq/aws-lambda-chrome/commit/df21385))
+* Improve docs ([e2d11a6](https://github.com/microlinkhq/aws-lambda-chrome/commit/e2d11a6))
+* Update ([48f48f3](https://github.com/microlinkhq/aws-lambda-chrome/commit/48f48f3))
+* Update README.md ([b22129f](https://github.com/microlinkhq/aws-lambda-chrome/commit/b22129f))
+
+
+
 <a name="1.0.4"></a>
 ## 1.0.4 (2018-02-11)
 
