@@ -6,9 +6,7 @@
 [![NPM Status](https://img.shields.io/npm/dm/@browserless/aws-lambda-chrome.svg?style=flat-square)](https://www.npmjs.org/package/aws-lambda-chrome)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/microlinkhq)
 
-> Chrome binary compatible with AWS Lambda.
-
-*Current version: 66.0.3343.0*
+> Chrome (v67.0.3372.0) binary compatible with AWS Lambda.
 
 ## Install
 
@@ -17,6 +15,10 @@ $ npm install @browserless/aws-lambda-chrome --save
 ```
 
 This package content a binary compressed version of Chrome compatible with AWS Lambda.
+
+## Usage
+
+> **Note**: Ensure to use `--disable-dev-shm-usage` flag.
 
 It has been designed to be used with [puppeteer](https://github.com/GoogleChrome/puppeteer), specially using [browserless](https://github.com/Kikobeats/browserless).
 
@@ -37,9 +39,10 @@ module.exports = async () =>
     ignoreHTTPSErrors: true,
     args: [
       '--disable-gpu',
-      '--single-process', // Currently wont work without this :-(
-      '--no-zygote', // helps avoid zombies
+      '--single-process',
+      '--no-zygote',
       '--no-sandbox',
+      '--disable-dev-shm-usage',
       '--hide-scrollbars'
     ],
     executablePath: await getExecutablePath()
