@@ -1,3 +1,10 @@
+<a name="1.2.0"></a>
+# 1.2.0 (2018-04-14)
+
+* Add Chrome v37 binary Compatible with puppeteer 1.3 ([aea26cc](https://github.com/microlinkhq/aws-lambda-chrome/commit/aea26cc))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2018-03-19)
 
