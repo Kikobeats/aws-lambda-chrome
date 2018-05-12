@@ -1,3 +1,10 @@
+<a name="1.3.0"></a>
+# 1.3.0 (2018-05-12)
+
+* Add Chrome v68 binary compatible with puppeteer 1.4 ([95b16c4](https://github.com/microlinkhq/aws-lambda-chrome/commit/95b16c4))
+
+
+
 <a name="1.2.0"></a>
 # 1.2.0 (2018-04-14)
 
