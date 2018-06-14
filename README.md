@@ -77,12 +77,11 @@ Where extract the binary.
 
 **Q: How to use a newer version of Node on AWS Lambda?**
 
-AWS Lambda runs a old version of Node.js that doesn't support async/await, spread operator, etc.
+Currently, AWS Lambda supports Node.js 6.10 and v8.10.
 
-You need to ship your fresh Node.js version with your lambda function.
+We recommend using the last Node.js version available with your Lambda function.
 
-This is an shell bash script to get the last node version available:
-
+If you need to provide your own Node.js executable, here a bash script for do that:
 
 ```bash
 #!/bin/bash
@@ -112,35 +111,14 @@ You can run the script as postinstall and then user the binary created for run y
 
 **Q: How Can I create my own Headless Chrome binary?**
 
-The idea behind the project is to ship a production-ready last chrome version available.
+The idea behind the project is to ship a production-ready of last Chrome version available.
 
 For do that, is necessary compile Chromium into a AWS Lambda compatible machine, normally a EC2.
 
-These instructions are related with generate the binary for the last (or older) version.
+We recommend the followings projects for get instructions to do that:
 
-You need to create a EC2 instance:
-
-- **AMI**: `amzn-ami-hvm-2017.09.0.20170930-x86_64-gp2` (Latest community Amazon Linux).
-- **Instance type**: c4.4xlarge.
-- **Storage**: 30GB.
-
-Then execute the script for build the binary:
-
-
-```sh
-curl https://rawgit.com/Kikobeats/aws-lambda-chrome/master/build.sh | bash
-```
-
-After the process finished, copy the result (and create a PR with the new binary!)
-
-
-```bash
-cd out
-export VERSION=<put chrome version here>
-tar -zcvf chrome-headless-aws-lambda-$VERSION-x64.tgz ./headless_shell
-
-scp -i path/to/your/key-pair.pem ec2-user@<instance-hostname>:path/to/tarball ./
-```
+- [chrome-aws-lambda Instructions](https://github.com/alixaxel/chrome-aws-lambda/tree/master/_/ansible).
+- [serverless-chrome instructions](https://github.com/adieuadieu/serverless-chrome/blob/master/docs/chrome.md).
 
 ## Related
 
