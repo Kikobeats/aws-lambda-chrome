@@ -1,3 +1,10 @@
+<a name="1.4.1"></a>
+## 1.4.1 (2018-09-10)
+
+* Use zip instead of br ([3f0a41f](https://github.com/microlinkhq/aws-lambda-chrome/commit/3f0a41f))
+
+
+
 <a name="1.4.0"></a>
 # 1.4.0 (2018-09-10)
 
