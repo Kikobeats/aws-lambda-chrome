@@ -46,7 +46,7 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
-    "lint": "standard-markdown && standard",
+    "lint": "standard-markdown README.md && standard",
     "precommit": "lint-staged",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin}/**/*.js --single-quote",
