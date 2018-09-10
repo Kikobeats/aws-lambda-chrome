@@ -1,15 +1,10 @@
 'use strict'
 
-const { decompressStream } = require('iltorb')
 const existsFile = require('exists-file')
-const { promisify } = require('util')
-const pump = require('pump')
+const decompress = require('decompress')
 const path = require('path')
-const fs = require('fs')
 
-const pipe = promisify(pump)
-
-const CHROME_ORIGIN_PATH = path.join(__dirname, '../dist/headless_shell.br')
+const CHROME_ORIGIN_PATH = path.join(__dirname, '../dist/headless_shell.zip')
 
 module.exports = ({
   path: tempPath = path.join(__dirname, '../dist')
@@ -19,11 +14,7 @@ module.exports = ({
 
   return async () => {
     if (await existsFile(extractPath)) return extractPath
-    await pipe(
-      fs.createReadStream(CHROME_ORIGIN_PATH),
-      decompressStream(),
-      fs.createWriteStream(extractPath)
-    )
+    await decompress(CHROME_ORIGIN_PATH, tempPath)
     return extractPath
   }
 }
