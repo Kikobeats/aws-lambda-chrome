@@ -1,3 +1,12 @@
+<a name="1.4.0"></a>
+# 1.4.0 (2018-09-10)
+
+* Update chrome ([ee3c71c](https://github.com/microlinkhq/aws-lambda-chrome/commit/ee3c71c))
+* Update chrome ([7cea19d](https://github.com/microlinkhq/aws-lambda-chrome/commit/7cea19d))
+* Update docs ([4ccd962](https://github.com/microlinkhq/aws-lambda-chrome/commit/4ccd962))
+
+
+
 <a name="1.3.0"></a>
 # 1.3.0 (2018-05-12)
 
