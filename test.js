@@ -1,7 +1,11 @@
 'use strict'
 
+const path = require('path')
+
+const decompressPath = path.resolve('tmp')
+
 const getChromePath = require('./src')({
-  path: '/tmp'
+  path: decompressPath
 })
 ;(async () => {
   const path = await getChromePath()

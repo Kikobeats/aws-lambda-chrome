@@ -25,8 +25,8 @@
     "serverless"
   ],
   "dependencies": {
-    "decompress": "~4.2.0",
-    "exists-file": "~3.0.2"
+    "exists-file": "~3.0.2",
+    "iltorb": "~2.4.0"
   },
   "devDependencies": {
     "finepack": "latest",
@@ -34,7 +34,7 @@
     "husky": "latest",
     "lint-staged": "latest",
     "prettier-standard": "latest",
-    "standard": "latest",
+    "standard": "11",
     "standard-markdown": "latest"
   },
   "engines": {
