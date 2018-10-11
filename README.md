@@ -6,7 +6,7 @@
 [![NPM Status](https://img.shields.io/npm/dm/@browserless/aws-lambda-chrome.svg?style=flat-square)](https://www.npmjs.org/package/aws-lambda-chrome)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/microlinkhq)
 
-> Chrome (v69.0.3452.0) binary compatible with AWS Lambda.
+> Chrome (v71.0.3563.0) binary compatible with AWS Lambda.
 
 ## Install
 
