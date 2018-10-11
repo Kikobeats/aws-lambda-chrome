@@ -1,3 +1,10 @@
+<a name="1.9.0"></a>
+# 1.9.0 (2018-10-11)
+
+* Update Chrome ([d340f37](https://github.com/microlinkhq/aws-lambda-chrome/commit/d340f37))
+
+
+
 <a name="1.4.1"></a>
 ## 1.4.1 (2018-09-10)
 

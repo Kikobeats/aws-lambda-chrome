@@ -2,7 +2,7 @@
   "name": "@browserless/aws-lambda-chrome",
   "description": "Chrome binary compatible with AWS Lambda.",
   "homepage": "https://documentup.com/microlinkhq/aws-lambda-chrome",
-  "version": "1.4.1",
+  "version": "1.9.0",
   "main": "src/index.js",
   "author": {
     "email": "hello@microlink.io",
