@@ -1,3 +1,10 @@
+<a name="1.10.0"></a>
+# 1.10.0 (2018-11-13)
+
+* Add Chrome 72.0.3582.0 ([45fd649](https://github.com/microlinkhq/aws-lambda-chrome/commit/45fd649))
+
+
+
 <a name="1.9.0"></a>
 # 1.9.0 (2018-10-11)
 
