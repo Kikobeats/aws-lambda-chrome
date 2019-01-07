@@ -1,3 +1,5 @@
+# DEPRECATE: USE https://github.com/alixaxel/chrome-aws-lambda INSTEAD
+
 # @browserless/aws-lambda-chrome
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/aws-lambda-chrome.svg?style=flat-square)
